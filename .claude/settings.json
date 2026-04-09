@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.aladin.co.kr)",
+      "WebFetch(domain:product.kyobobook.co.kr)",
+      "WebFetch(domain:image.kyobobook.co.kr)",
+      "WebFetch(domain:blog.naver.com)"
+    ]
+  }
+}
