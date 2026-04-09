@@ -1,12 +1,13 @@
 import Link from 'next/link';
 import { BookOpen, Terminal, Cpu, Mail, ExternalLink, ChevronRight, Target } from 'lucide-react';
+import MobileMenu from './MobileMenu';
 
 
 const CodingLabWeb = () => {
   return (
     <div className="min-h-screen bg-slate-900 text-slate-100 font-sans">
       {/* Navigation */}
-      <nav className="flex items-center justify-between px-8 py-6 border-b border-slate-800 bg-slate-900/50 backdrop-blur-md sticky top-0 z-50">
+      <nav className="relative flex items-center justify-between px-8 py-6 border-b border-slate-800 bg-slate-900/50 backdrop-blur-md sticky top-0 z-50">
         <div className="text-2xl font-bold tracking-tighter text-blue-400 flex items-center gap-2">
           <Target className="text-red-500" size={24} />
           <span>이창현<span className="text-white">코딩연구소</span></span>
@@ -17,9 +18,12 @@ const CodingLabWeb = () => {
           <a href="#research" className="hover:text-blue-400 transition">연구/개발</a>
           <Link href="/books" className="hover:text-blue-400 transition">저서</Link>
         </div>
-        <button className="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-full text-sm font-semibold transition">
-          문의하기
-        </button>
+        <div className="flex items-center gap-3">
+          <button className="hidden md:block bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-full text-sm font-semibold transition">
+            문의하기
+          </button>
+          <MobileMenu />
+        </div>
       </nav>
 
       {/* Hero Section (Modified Title & Color) */}
