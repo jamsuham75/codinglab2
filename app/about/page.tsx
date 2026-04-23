@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Target, ChevronRight, BookOpen, Award, Briefcase, GraduationCap } from 'lucide-react';
+import { Target, ChevronRight, BookOpen, Terminal, Cpu, Award, Briefcase, GraduationCap } from 'lucide-react';
 import MobileMenu from '../MobileMenu';
 import ContactDropdown from '../ContactDropdown';
 import SocialFooter from '../SocialFooter';
