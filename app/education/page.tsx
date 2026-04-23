@@ -1,10 +1,12 @@
 import Link from 'next/link';
 import {
-  Target, ChevronRight, Terminal, Cpu, BookOpen,
-  Mail, ExternalLink, Users, Clock, Star, CheckCircle,
+  Target, ChevronRight,
+  Mail, Users, Clock, Star, CheckCircle,
   Monitor, Shield, Brain, Code2,
 } from 'lucide-react';
 import MobileMenu from '../MobileMenu';
+import ContactDropdown from '../ContactDropdown';
+import SocialFooter from '../SocialFooter';
 
 const courses = [
   {
@@ -132,13 +134,11 @@ export default function EducationPage() {
         <div className="hidden md:flex space-x-8 text-sm font-medium">
           <Link href="/about" className="hover:text-blue-400 transition">연구소 소개</Link>
           <Link href="/education" className="text-blue-400 transition">교육 서비스</Link>
-          <a href="/#research" className="hover:text-blue-400 transition">연구/개발</a>
+          <Link href="/research" className="hover:text-blue-400 transition">연구/개발</Link>
           <Link href="/books" className="hover:text-blue-400 transition">저서</Link>
         </div>
         <div className="flex items-center gap-3">
-          <button className="hidden md:block bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-full text-sm font-semibold transition">
-            문의하기
-          </button>
+          <ContactDropdown />
           <MobileMenu />
         </div>
       </nav>
@@ -277,7 +277,7 @@ export default function EducationPage() {
         </p>
         <div className="flex flex-col md:flex-row justify-center gap-4">
           <a
-            href="mailto:jamsuham75@gmail.com"
+            href="mailto:jamsuham75@naver.com"
             className="bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-lg font-bold flex items-center justify-center gap-2 transition"
           >
             <Mail size={18} /> 이메일로 문의하기
@@ -291,24 +291,7 @@ export default function EducationPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="px-8 py-16 border-t border-slate-800 text-center">
-        <div className="max-w-6xl mx-auto flex flex-col items-center gap-6">
-          <Link href="/" className="text-xl font-bold tracking-tighter text-blue-400 flex items-center gap-2">
-            <Target className="text-red-500" size={20} />
-            <span>이창현<span className="text-white">코딩연구소</span></span>
-          </Link>
-          <p className="text-slate-500 text-sm max-w-md">
-            경기도 수원시 영통구 산남로 99 | 대표: 이창현<br />
-            삼성, SK 경력 | 전 성신여대 융합보안공학과 겸임교수
-          </p>
-          <div className="flex gap-4">
-            <Mail className="text-slate-400 cursor-pointer hover:text-white" size={20} />
-            <ExternalLink className="text-slate-400 cursor-pointer hover:text-white" size={20} />
-          </div>
-          <p className="text-slate-600 text-xs mt-4">© 2026 Lee Chang-hyun Coding Lab. All rights reserved.</p>
-        </div>
-      </footer>
+      <SocialFooter />
     </div>
   );
 }

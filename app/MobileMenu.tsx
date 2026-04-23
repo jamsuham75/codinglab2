@@ -21,7 +21,7 @@ export default function MobileMenu() {
         <div className="absolute top-full left-0 right-0 bg-slate-900/95 backdrop-blur-md border-b border-slate-800 flex flex-col px-8 py-4 space-y-4 text-sm font-medium z-50">
           <Link href="/about" className="hover:text-blue-400 transition" onClick={() => setOpen(false)}>연구소 소개</Link>
           <Link href="/education" className="hover:text-blue-400 transition" onClick={() => setOpen(false)}>교육 서비스</Link>
-          <a href="#research" className="hover:text-blue-400 transition" onClick={() => setOpen(false)}>연구/개발</a>
+          <Link href="/research" className="hover:text-blue-400 transition" onClick={() => setOpen(false)}>연구/개발</Link>
           <Link href="/books" className="hover:text-blue-400 transition" onClick={() => setOpen(false)}>저서</Link>
         </div>
       )}
