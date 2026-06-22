@@ -49,9 +49,9 @@ const CodingLabWeb = () => {
           <Link href="/curriculum" className="bg-white text-slate-900 px-8 py-4 rounded-lg font-bold flex items-center justify-center gap-2 hover:bg-blue-50 transition">
             실전 강의 커리큘럼 <ChevronRight size={20} />
           </Link>
-          <button className="border border-slate-700 text-white px-8 py-4 rounded-lg font-bold hover:bg-slate-800 transition">
+          <Link href="/contact" className="border border-slate-700 text-white px-8 py-4 rounded-lg font-bold hover:bg-slate-800 transition flex items-center justify-center gap-2">
             연구 및 협업 문의
-          </button>
+          </Link>
         </div>
       </section>
 
