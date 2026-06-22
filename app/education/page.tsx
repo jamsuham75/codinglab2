@@ -159,7 +159,7 @@ export default function EducationPage() {
   return (
     <div className="min-h-screen bg-slate-900 text-slate-100 font-sans">
       {/* Navigation */}
-      <nav className="relative flex items-center justify-between px-8 py-6 border-b border-slate-800 bg-slate-900/50 backdrop-blur-md sticky top-0 z-50">
+      <nav className="relative flex items-center justify-between px-4 sm:px-8 py-6 border-b border-slate-800 bg-slate-900/50 backdrop-blur-md sticky top-0 z-50">
         <Link href="/" className="text-2xl font-bold tracking-tighter text-blue-400 flex items-center gap-2">
           <Target className="text-red-500" size={24} />
           <span>이창현<span className="text-white">코딩연구소</span></span>
@@ -177,7 +177,7 @@ export default function EducationPage() {
       </nav>
 
       {/* Hero */}
-      <section className="px-8 py-20 md:py-28 max-w-6xl mx-auto">
+      <section className="px-4 sm:px-8 py-20 md:py-28 max-w-6xl mx-auto">
         <div className="flex items-center gap-2 text-sm text-slate-500 mb-6">
           <Link href="/" className="hover:text-slate-300 transition">홈</Link>
           <ChevronRight size={14} />
@@ -185,27 +185,27 @@ export default function EducationPage() {
         </div>
         <div className="md:flex md:items-end md:justify-between gap-8">
           <div>
-            <h1 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight leading-tight">
+            <h1 className="text-3xl md:text-6xl font-extrabold mb-6 tracking-tight leading-tight">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-400 via-white to-blue-400">
                 교육 서비스
               </span>
             </h1>
-            <p className="text-xl text-slate-400 max-w-2xl leading-relaxed">
+            <p className="text-base sm:text-xl text-slate-400 max-w-2xl leading-relaxed">
               단순 이론 암기가 아닌,{' '}
               <span className="text-white font-semibold">총 10개의 프로젝트</span>를 통해 실무 역량을 극대화합니다.
               모든 수업은 <span className="text-white font-semibold">저자 직강</span>으로 진행됩니다.
             </p>
           </div>
           <div className="mt-8 md:mt-0 flex gap-4 flex-shrink-0">
-            <div className="text-center p-5 bg-slate-800 rounded-2xl border border-slate-700 min-w-[90px]">
+            <div className="text-center p-3 sm:p-5 bg-slate-800 rounded-2xl border border-slate-700 min-w-[76px] sm:min-w-[90px]">
               <div className="text-3xl font-extrabold text-red-400">10개</div>
               <div className="text-xs text-slate-400 mt-1">프로젝트 수행</div>
             </div>
-            <div className="text-center p-5 bg-slate-800 rounded-2xl border border-slate-700 min-w-[90px]">
+            <div className="text-center p-3 sm:p-5 bg-slate-800 rounded-2xl border border-slate-700 min-w-[76px] sm:min-w-[90px]">
               <div className="text-3xl font-extrabold text-blue-400">1,000+</div>
               <div className="text-xs text-slate-400 mt-1">수료생</div>
             </div>
-            <div className="text-center p-5 bg-slate-800 rounded-2xl border border-slate-700 min-w-[90px]">
+            <div className="text-center p-3 sm:p-5 bg-slate-800 rounded-2xl border border-slate-700 min-w-[76px] sm:min-w-[90px]">
               <div className="text-3xl font-extrabold text-emerald-400">저자</div>
               <div className="text-xs text-slate-400 mt-1">직강 진행</div>
             </div>
@@ -214,7 +214,7 @@ export default function EducationPage() {
       </section>
 
       {/* 교육 철학 */}
-      <section className="px-8 py-16 bg-slate-800/40">
+      <section className="px-4 sm:px-8 py-16 bg-slate-800/40">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl font-bold mb-8 text-center text-white">교육 철학</h2>
           <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-5">
@@ -230,7 +230,7 @@ export default function EducationPage() {
       </section>
 
       {/* 커리큘럼 로드맵 */}
-      <section className="px-8 py-20 max-w-6xl mx-auto">
+      <section className="px-4 sm:px-8 py-20 max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-center text-white mb-4">개발자 양성 과정 커리큘럼</h2>
         <p className="text-center text-slate-400 mb-14 text-sm">
           프로그래밍 기초(C언어)부터 AI 융합, 풀스택 개발, 팀 프로젝트까지 — 현시점 취업을 가능하게 하는 최적의 로드맵
@@ -240,7 +240,7 @@ export default function EducationPage() {
           {phases.map((p) => (
             <div key={p.phase} className={`bg-slate-800 rounded-2xl border ${p.borderColor} overflow-hidden`}>
               {/* Phase header */}
-              <div className={`px-7 py-4 border-b ${p.borderColor} flex items-center gap-3`}>
+              <div className={`px-4 sm:px-7 py-3 sm:py-4 border-b ${p.borderColor} flex items-center gap-3`}>
                 <span className={`text-xs font-bold px-2.5 py-1 rounded-full ${p.badgeBg} ${p.badgeText}`}>
                   {p.phase}
                 </span>
@@ -250,7 +250,7 @@ export default function EducationPage() {
               {/* Phase items */}
               <ul className="divide-y divide-slate-700/50">
                 {p.items.map((item, idx) => (
-                  <li key={idx} className="flex items-center justify-between gap-4 px-7 py-4">
+                  <li key={idx} className="flex items-center justify-between gap-4 px-4 sm:px-7 py-3 sm:py-4">
                     <div className="flex items-center gap-3">
                       <ChevronRight size={14} className={`flex-shrink-0 ${p.accentColor}`} />
                       <span className="text-slate-200 text-sm">{item.topic}</span>
@@ -277,7 +277,7 @@ export default function EducationPage() {
       </section>
 
       {/* 특강 */}
-      <section className="px-8 py-16 bg-slate-800/30">
+      <section className="px-4 sm:px-8 py-16 bg-slate-800/30">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center gap-3 mb-8">
             <div className="bg-yellow-500/10 p-2 rounded-lg">
@@ -300,7 +300,7 @@ export default function EducationPage() {
       </section>
 
       {/* 수강 신청 절차 */}
-      <section className="px-8 py-20 bg-slate-800/20">
+      <section className="px-4 sm:px-8 py-20 bg-slate-800/20">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-12 text-center text-white">수강 신청 절차</h2>
           <div className="relative">
@@ -328,7 +328,7 @@ export default function EducationPage() {
       </section>
 
       {/* CTA */}
-      <section className="px-8 py-20 max-w-6xl mx-auto text-center">
+      <section className="px-4 sm:px-8 py-20 max-w-6xl mx-auto text-center">
         <div className="flex justify-center mb-4">
           <Rocket size={32} className="text-blue-400" />
         </div>
@@ -336,16 +336,16 @@ export default function EducationPage() {
         <p className="text-slate-400 mb-8 max-w-xl mx-auto">
           개인 수강부터 기업 단체 강의까지 — 목적과 규모에 맞게 설계해 드립니다.
         </p>
-        <div className="flex flex-col md:flex-row justify-center gap-4">
+        <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
           <a
             href="mailto:jamsuham75@naver.com"
-            className="bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-lg font-bold flex items-center justify-center gap-2 transition"
+            className="bg-blue-600 hover:bg-blue-500 text-white px-4 sm:px-8 py-4 rounded-lg font-bold flex items-center justify-center gap-2 transition"
           >
             <Mail size={18} /> 이메일로 문의하기
           </a>
           <Link
             href="/about"
-            className="border border-slate-700 text-white px-8 py-4 rounded-lg font-bold hover:bg-slate-800 transition"
+            className="border border-slate-700 text-white px-4 sm:px-8 py-4 rounded-lg font-bold hover:bg-slate-800 transition"
           >
             연구소 소개 보기
           </Link>

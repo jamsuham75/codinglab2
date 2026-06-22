@@ -133,7 +133,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-slate-900 text-slate-100 font-sans">
       {/* Nav */}
-      <nav className="relative flex items-center justify-between px-8 py-6 border-b border-slate-800 bg-slate-900/50 backdrop-blur-md sticky top-0 z-50">
+      <nav className="relative flex items-center justify-between px-4 sm:px-8 py-6 border-b border-slate-800 bg-slate-900/50 backdrop-blur-md sticky top-0 z-50">
         <Link href="/" className="text-2xl font-bold tracking-tighter text-blue-400 flex items-center gap-2">
           <Target className="text-red-500" size={24} />
           <span>이창현<span className="text-white">코딩연구소</span></span>
@@ -151,33 +151,33 @@ export default function ContactPage() {
       </nav>
 
       {/* Hero */}
-      <section className="px-8 py-20 md:py-28 max-w-6xl mx-auto">
+      <section className="px-4 sm:px-8 py-20 md:py-28 max-w-6xl mx-auto">
         <div className="flex items-center gap-2 text-sm text-slate-500 mb-6">
           <Link href="/" className="hover:text-slate-300 transition">홈</Link>
           <ChevronRight size={14} />
           <span className="text-slate-300">연구 및 협업 문의</span>
         </div>
-        <h1 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight leading-tight">
+        <h1 className="text-3xl md:text-6xl font-extrabold mb-6 tracking-tight leading-tight">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-400 via-white to-blue-400">
             연구 및 협업 문의
           </span>
         </h1>
-        <p className="text-xl text-slate-400 max-w-2xl leading-relaxed">
+        <p className="text-base sm:text-xl text-slate-400 max-w-2xl leading-relaxed">
           교육 수강부터 기업 강의, 공동 연구, 기술 자문까지 —
           어떤 형태의 협업이든 편하게 문의해 주세요.
         </p>
       </section>
 
       {/* 연락 방법 */}
-      <section className="px-8 py-6 max-w-6xl mx-auto">
-        <div className="grid sm:grid-cols-3 gap-4">
+      <section className="px-4 sm:px-8 py-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
           {contactMethods.map((m) => (
             <a
               key={m.label}
               href={m.href}
               target={m.href.startsWith('mailto') ? undefined : '_blank'}
               rel="noopener noreferrer"
-              className="flex items-center gap-4 p-5 bg-slate-800 rounded-2xl border border-slate-700 hover:border-blue-500/50 transition group"
+              className="flex items-center gap-3 p-4 sm:p-5 bg-slate-800 rounded-2xl border border-slate-700 hover:border-blue-500/50 transition group"
             >
               <div className="bg-blue-500/10 p-3 rounded-xl text-blue-400 flex-shrink-0 group-hover:bg-blue-500/20 transition">
                 {m.icon}
@@ -193,7 +193,7 @@ export default function ContactPage() {
       </section>
 
       {/* 문의 유형 + 폼 */}
-      <section className="px-8 py-16 max-w-6xl mx-auto">
+      <section className="px-4 sm:px-8 py-16 max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12">
 
           {/* 왼쪽: 문의 유형 */}
@@ -205,7 +205,7 @@ export default function ContactPage() {
                 <button
                   key={t.id}
                   onClick={() => setSelectedType(t.id)}
-                  className={`w-full flex items-center gap-4 p-5 rounded-2xl border text-left transition-all ${
+                  className={`w-full flex items-center gap-3 p-3 sm:p-5 rounded-2xl border text-left transition-all ${
                     selectedType === t.id
                       ? `${t.activeBg} ${t.activeBorder} border`
                       : 'bg-slate-800 border-slate-700 hover:border-slate-500'
@@ -336,10 +336,10 @@ export default function ContactPage() {
       </section>
 
       {/* 응답 절차 */}
-      <section className="px-8 py-20 bg-slate-800/30">
+      <section className="px-4 sm:px-8 py-20 bg-slate-800/30">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-white text-center mb-12">문의 후 진행 절차</h2>
-          <div className="grid sm:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6">
             {[
               { step: '01', icon: <Mail size={20} />, title: '문의 접수', desc: '이메일 수신 후 1–2 영업일 내 확인' },
               { step: '02', icon: <MessageSquare size={20} />, title: '내용 검토', desc: '문의 유형에 따라 적합한 방향 검토' },
@@ -360,11 +360,11 @@ export default function ContactPage() {
       </section>
 
       {/* 바로 이메일 */}
-      <section className="px-8 py-16 max-w-6xl mx-auto text-center">
+      <section className="px-4 sm:px-8 py-16 max-w-6xl mx-auto text-center">
         <p className="text-slate-400 mb-4">폼 작성보다 바로 이메일을 선호하신다면</p>
         <a
           href="mailto:jamsuham75@naver.com"
-          className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-lg font-bold transition"
+          className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-4 sm:px-8 py-4 rounded-lg font-bold transition"
         >
           <Mail size={18} /> jamsuham75@naver.com 바로 보내기
         </a>

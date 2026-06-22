@@ -262,7 +262,7 @@ export default function CurriculumPage() {
   return (
     <div className="min-h-screen bg-slate-900 text-slate-100 font-sans">
       {/* Nav */}
-      <nav className="relative flex items-center justify-between px-8 py-6 border-b border-slate-800 bg-slate-900/50 backdrop-blur-md sticky top-0 z-50">
+      <nav className="relative flex items-center justify-between px-4 sm:px-8 py-6 border-b border-slate-800 bg-slate-900/50 backdrop-blur-md sticky top-0 z-50">
         <Link href="/" className="text-2xl font-bold tracking-tighter text-blue-400 flex items-center gap-2">
           <Target className="text-red-500" size={24} />
           <span>이창현<span className="text-white">코딩연구소</span></span>
@@ -280,24 +280,24 @@ export default function CurriculumPage() {
       </nav>
 
       {/* Hero */}
-      <section className="px-8 py-20 md:py-24 max-w-6xl mx-auto">
+      <section className="px-4 sm:px-8 py-20 md:py-24 max-w-6xl mx-auto">
         <div className="flex items-center gap-2 text-sm text-slate-500 mb-6">
           <Link href="/" className="hover:text-slate-300 transition">홈</Link>
           <ChevronRight size={14} />
           <span className="text-slate-300">실전 강의 커리큘럼</span>
         </div>
-        <h1 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight leading-tight">
+        <h1 className="text-3xl md:text-6xl font-extrabold mb-6 tracking-tight leading-tight">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-400 via-white to-blue-400">
             실전 강의 커리큘럼
           </span>
         </h1>
-        <p className="text-xl text-slate-400 max-w-2xl leading-relaxed">
+        <p className="text-base sm:text-xl text-slate-400 max-w-2xl leading-relaxed">
           20여년 현업 경험과 저자 직강으로 설계된 주차별 커리큘럼. 무엇을, 왜, 어떤 순서로 배우는지 확인하세요.
         </p>
       </section>
 
       {/* Course Tabs */}
-      <section className="px-8 max-w-6xl mx-auto mb-10">
+      <section className="px-4 sm:px-8 max-w-6xl mx-auto mb-10">
         <div className="flex flex-wrap gap-3">
           {courses.map((c) => (
             <button
@@ -317,9 +317,9 @@ export default function CurriculumPage() {
       </section>
 
       {/* Course Detail */}
-      <section className="px-8 pb-20 max-w-6xl mx-auto">
+      <section className="px-4 sm:px-8 pb-20 max-w-6xl mx-auto">
         {/* Summary card */}
-        <div className="bg-slate-800 rounded-3xl border border-slate-700 p-8 mb-10">
+        <div className="bg-slate-800 rounded-3xl border border-slate-700 p-4 sm:p-8 mb-8 md:mb-10">
           <div className="flex flex-wrap items-start justify-between gap-6">
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-3 mb-1">
@@ -338,11 +338,11 @@ export default function CurriculumPage() {
               </div>
             </div>
             <div className="flex gap-4 flex-shrink-0">
-              <div className="text-center p-4 bg-slate-900 rounded-2xl border border-slate-700 min-w-[80px]">
+              <div className="text-center p-3 sm:p-4 bg-slate-900 rounded-2xl border border-slate-700 min-w-[64px] sm:min-w-[80px]">
                 <Clock size={16} className={`mx-auto mb-1 ${course.accent}`} />
                 <div className="text-xs text-slate-400">{course.total}</div>
               </div>
-              <div className="text-center p-4 bg-slate-900 rounded-2xl border border-slate-700 min-w-[80px]">
+              <div className="text-center p-3 sm:p-4 bg-slate-900 rounded-2xl border border-slate-700 min-w-[64px] sm:min-w-[80px]">
                 <BookOpen size={16} className={`mx-auto mb-1 ${course.accent}`} />
                 <div className="text-xs text-slate-400">{course.level}</div>
               </div>
@@ -356,7 +356,7 @@ export default function CurriculumPage() {
           {course.weeks.map((w, i) => (
             <div
               key={w.week}
-              className="grid md:grid-cols-[120px_1fr] gap-0 bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden"
+              className="grid grid-cols-1 md:grid-cols-[120px_1fr] gap-0 bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden"
             >
               {/* Week label */}
               <div className={`flex flex-col items-center justify-center p-5 ${course.badgeBg} border-b md:border-b-0 md:border-r border-slate-700`}>
@@ -381,7 +381,7 @@ export default function CurriculumPage() {
       </section>
 
       {/* CTA */}
-      <section className="px-8 py-20 bg-slate-800/40">
+      <section className="px-4 sm:px-8 py-20 bg-slate-800/40">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4 text-white">수강 신청 & 일정 문의</h2>
           <p className="text-slate-400 mb-8">
@@ -390,13 +390,13 @@ export default function CurriculumPage() {
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a
               href="mailto:jamsuham75@naver.com"
-              className="bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-lg font-bold flex items-center justify-center gap-2 transition"
+              className="bg-blue-600 hover:bg-blue-500 text-white px-4 sm:px-8 py-4 rounded-lg font-bold flex items-center justify-center gap-2 transition"
             >
               <Mail size={18} /> 이메일로 문의하기
             </a>
             <Link
               href="/education"
-              className="border border-slate-700 text-white px-8 py-4 rounded-lg font-bold hover:bg-slate-800 transition"
+              className="border border-slate-700 text-white px-4 sm:px-8 py-4 rounded-lg font-bold hover:bg-slate-800 transition"
             >
               전체 교육 서비스 보기
             </Link>

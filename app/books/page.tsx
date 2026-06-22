@@ -417,8 +417,8 @@ function Bookshelf({ books: shelfBooks, onSelect }: { books: Book[]; onSelect: (
   return (
     <div className="relative">
       <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-slate-800/40 to-slate-800/10 pointer-events-none" />
-      <div className="relative p-8 md:p-12">
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6 md:gap-8">
+      <div className="relative p-4 sm:p-8 md:p-12">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-5 md:gap-8">
           {shelfBooks.map((book) => (
             <BookCard key={book.id} book={book} onClick={() => onSelect(book)} />
           ))}
@@ -439,7 +439,7 @@ export default function BooksPage() {
   return (
     <div className="min-h-screen bg-slate-900 text-slate-100">
       {/* Navigation */}
-      <nav className="flex items-center justify-between px-8 py-5 border-b border-slate-800 bg-slate-900/80 backdrop-blur-md sticky top-0 z-40">
+      <nav className="flex items-center justify-between px-4 sm:px-8 py-5 border-b border-slate-800 bg-slate-900/80 backdrop-blur-md sticky top-0 z-40">
         <Link
           href="/"
           className="flex items-center gap-2 text-slate-400 hover:text-white transition text-sm font-medium"
@@ -453,11 +453,11 @@ export default function BooksPage() {
         <div className="w-20" />
       </nav>
 
-      <main className="max-w-6xl mx-auto px-8 py-16 space-y-20">
+      <main className="max-w-6xl mx-auto px-4 sm:px-8 py-16 space-y-20">
         {/* Page header */}
         <div className="text-center">
           <p className="text-blue-400 text-sm font-semibold uppercase tracking-widest mb-3">Library</p>
-          <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">서재</h1>
+          <h1 className="text-3xl md:text-5xl font-extrabold text-white mb-4">서재</h1>
           <p className="text-slate-400 max-w-xl mx-auto leading-relaxed">
             25년 개발 경력과 강의 현장의 경험을 담은{' '}
             <span className="text-white font-semibold">저서 {authored.length}권</span>과{' '}
@@ -501,7 +501,7 @@ export default function BooksPage() {
       )}
 
       {/* CTA */}
-      <section className="px-8 py-20 bg-slate-800/40 text-center">
+      <section className="px-4 sm:px-8 py-20 bg-slate-800/40 text-center">
         <h2 className="text-2xl font-bold text-white mb-3">강의·집필 관련 문의</h2>
         <p className="text-slate-400 mb-8 max-w-xl mx-auto text-sm">
           저서 기반 강의 수강, 기업 교육, 공동 연구 등 어떤 형태의 협업이든 편하게 연락 주세요.
@@ -509,13 +509,13 @@ export default function BooksPage() {
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <a
             href="mailto:jamsuham75@naver.com"
-            className="bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-lg font-bold flex items-center justify-center gap-2 transition"
+            className="bg-blue-600 hover:bg-blue-500 text-white px-4 sm:px-8 py-4 rounded-lg font-bold flex items-center justify-center gap-2 transition"
           >
             <Mail size={18} /> 이메일로 문의하기
           </a>
           <Link
             href="/curriculum"
-            className="border border-slate-700 text-white px-8 py-4 rounded-lg font-bold hover:bg-slate-800 transition flex items-center justify-center gap-2"
+            className="border border-slate-700 text-white px-4 sm:px-8 py-4 rounded-lg font-bold hover:bg-slate-800 transition flex items-center justify-center gap-2"
           >
             강의 커리큘럼 보기 <ChevronRight size={18} />
           </Link>

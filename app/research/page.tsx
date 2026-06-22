@@ -174,7 +174,7 @@ export default function ResearchPage() {
   return (
     <div className="min-h-screen bg-slate-900 text-slate-100 font-sans">
       {/* Nav */}
-      <nav className="relative flex items-center justify-between px-8 py-6 border-b border-slate-800 bg-slate-900/50 backdrop-blur-md sticky top-0 z-50">
+      <nav className="relative flex items-center justify-between px-4 sm:px-8 py-6 border-b border-slate-800 bg-slate-900/50 backdrop-blur-md sticky top-0 z-50">
         <Link href="/" className="text-2xl font-bold tracking-tighter text-blue-400 flex items-center gap-2">
           <Target className="text-red-500" size={24} />
           <span>이창현<span className="text-white">코딩연구소</span></span>
@@ -192,30 +192,30 @@ export default function ResearchPage() {
       </nav>
 
       {/* Hero */}
-      <section className="px-8 py-20 md:py-28 max-w-6xl mx-auto">
+      <section className="px-4 sm:px-8 py-20 md:py-28 max-w-6xl mx-auto">
         <div className="flex items-center gap-2 text-sm text-slate-500 mb-6">
           <Link href="/" className="hover:text-slate-300 transition">홈</Link>
           <ChevronRight size={14} />
           <span className="text-slate-300">연구/개발</span>
         </div>
-        <h1 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight leading-tight">
+        <h1 className="text-3xl md:text-6xl font-extrabold mb-6 tracking-tight leading-tight">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-400 via-white to-blue-400">
             연구 / 개발
           </span>
         </h1>
-        <p className="text-xl text-slate-400 max-w-2xl leading-relaxed">
+        <p className="text-base sm:text-xl text-slate-400 max-w-2xl leading-relaxed">
           20여년간 삼성·SK·웹젠 등 주요 기업 프로젝트에서 검증된 기술력을 바탕으로,
           <span className="text-white font-semibold"> AI, 시스템 소프트웨어, 웹 풀스택, 보안</span> 분야의 연구·개발을 수행합니다.
         </p>
       </section>
 
       {/* Research Areas */}
-      <section className="px-8 py-16 bg-slate-800/40">
+      <section className="px-4 sm:px-8 py-16 bg-slate-800/40">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold mb-12 text-center text-white">연구 분야</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {areas.map((a) => (
-              <div key={a.title} className={`p-8 bg-slate-800 rounded-2xl border border-slate-700 ${a.border} transition-all hover:-translate-y-1`}>
+              <div key={a.title} className={`p-5 sm:p-8 bg-slate-800 rounded-2xl border border-slate-700 ${a.border} transition-all hover:-translate-y-1`}>
                 <div className={`${a.iconBg} p-3 w-fit rounded-xl mb-5 ${a.accent}`}>{a.icon}</div>
                 <h3 className="text-xl font-bold text-white mb-3">{a.title}</h3>
                 <p className="text-slate-400 text-sm leading-relaxed mb-5">{a.desc}</p>
@@ -234,7 +234,7 @@ export default function ResearchPage() {
       </section>
 
       {/* Projects */}
-      <section className="px-8 py-20 max-w-6xl mx-auto">
+      <section className="px-4 sm:px-8 py-20 max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold mb-3 text-center text-white">주요 프로젝트</h2>
         <p className="text-slate-500 text-center mb-12">20여년간 현업에서 직접 설계·개발에 참여한 대표 프로젝트</p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -257,7 +257,7 @@ export default function ResearchPage() {
       </section>
 
       {/* Collaboration */}
-      <section className="px-8 py-20 bg-slate-800/30">
+      <section className="px-4 sm:px-8 py-20 bg-slate-800/30">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold mb-3 text-center text-white">협업 및 의뢰</h2>
           <p className="text-slate-500 text-center mb-12">연구·개발 관련 협업은 아래 형태로 진행합니다</p>
@@ -274,7 +274,7 @@ export default function ResearchPage() {
           {/* Process */}
           <div className="bg-slate-800 rounded-3xl border border-slate-700 p-8 md:p-10">
             <h3 className="text-xl font-bold text-white mb-8 text-center">협업 진행 절차</h3>
-            <div className="grid sm:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
                 { step: '01', title: '문의·상담', desc: '이메일로 과제 개요 및 목표 공유' },
                 { step: '02', title: '범위 협의', desc: '기술 검토 후 PoC 범위와 일정 확정' },
@@ -298,7 +298,7 @@ export default function ResearchPage() {
       </section>
 
       {/* CTA */}
-      <section className="px-8 py-20 max-w-6xl mx-auto text-center">
+      <section className="px-4 sm:px-8 py-20 max-w-6xl mx-auto text-center">
         <h2 className="text-3xl font-bold mb-4 text-white">연구·개발 협업 문의</h2>
         <p className="text-slate-400 mb-8 max-w-xl mx-auto">
           AI, 시스템, 웹 풀스택, 보안 분야의 기술 과제라면 어떤 형태든 검토해드립니다.
@@ -306,13 +306,13 @@ export default function ResearchPage() {
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <a
             href="mailto:jamsuham75@naver.com"
-            className="bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-lg font-bold flex items-center justify-center gap-2 transition"
+            className="bg-blue-600 hover:bg-blue-500 text-white px-4 sm:px-8 py-4 rounded-lg font-bold flex items-center justify-center gap-2 transition"
           >
             <Mail size={18} /> 이메일로 문의하기
           </a>
           <Link
             href="/education"
-            className="border border-slate-700 text-white px-8 py-4 rounded-lg font-bold hover:bg-slate-800 transition"
+            className="border border-slate-700 text-white px-4 sm:px-8 py-4 rounded-lg font-bold hover:bg-slate-800 transition"
           >
             교육 서비스 보기
           </Link>
