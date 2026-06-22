@@ -29,10 +29,16 @@ const CodingLabWeb = () => {
       {/* Hero Section (Modified Title & Color) */}
       <section className="px-8 py-24 md:py-32 max-w-6xl mx-auto text-center">
         {/* 새로운 타이틀 및 3색 그라데이션 적용 */}
-        <h1 className="text-5xl md:text-7xl font-extrabold mb-8 tracking-tight leading-tight">
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-500 via-white to-blue-500 animate-gradient-x">
-            코딩의 방향을 바꾸다
-          </span>
+        <h1 className="text-5xl md:text-7xl font-extrabold mb-8 tracking-tight leading-tight flex flex-wrap justify-center gap-x-5 gap-y-2">
+          {(['코딩의', '방향을', '바꾸다'] as const).map((word, i) => (
+            <span
+              key={word}
+              className="hero-title-word"
+              style={{ animationDelay: `${i * 0.18}s` }}
+            >
+              <span className="hero-gradient-text">{word}</span>
+            </span>
+          ))}
         </h1>
         
         <p className="text-xl text-slate-400 mb-12 max-w-3xl mx-auto leading-relaxed">

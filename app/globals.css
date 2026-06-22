@@ -24,3 +24,45 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes slide-up-fade {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes gradient-shift {
+  0%   { background-position: 0% center; }
+  50%  { background-position: 100% center; }
+  100% { background-position: 0% center; }
+}
+
+.hero-title-word {
+  display: inline-block;
+  opacity: 0;
+  animation: slide-up-fade 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-gradient-text {
+  background: linear-gradient(
+    90deg,
+    #ef4444 0%,
+    #f8fafc 28%,
+    #3b82f6 52%,
+    #f8fafc 76%,
+    #ef4444 100%
+  );
+  background-size: 300% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: gradient-shift 5s ease infinite;
+}

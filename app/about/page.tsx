@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Target, ChevronRight, BookOpen, Terminal, Cpu, Award, Briefcase, GraduationCap } from 'lucide-react';
+import { Target, ChevronRight, BookOpen, Terminal, Cpu, Award, Briefcase, GraduationCap, Play } from 'lucide-react';
 import MobileMenu from '../MobileMenu';
 import ContactDropdown from '../ContactDropdown';
 import SocialFooter from '../SocialFooter';
@@ -91,6 +91,14 @@ export default function AboutPage() {
                 <div className="text-lg font-bold text-white">이창현</div>
                 <div className="text-sm text-slate-400">대표 / 수석 강사</div>
               </div>
+              <a
+                href="https://youtu.be/AQv4E1nB800"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-4 py-2 bg-red-600 hover:bg-red-500 text-white text-xs font-bold rounded-lg transition"
+              >
+                <Play size={14} /> 소개 영상 보기
+              </a>
             </div>
             <div className="flex-1 space-y-6">
               <div>
@@ -149,6 +157,25 @@ export default function AboutPage() {
                 </ul>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* YouTube 소개 영상 */}
+        <div className="mt-8 bg-slate-800 rounded-3xl border border-slate-700 overflow-hidden">
+          <div className="flex items-center gap-3 px-7 py-4 border-b border-slate-700">
+            <div className="bg-red-500/10 p-2 rounded-lg">
+              <Play size={18} className="text-red-400" />
+            </div>
+            <span className="font-semibold text-white text-sm">강사 소개 영상</span>
+          </div>
+          <div className="aspect-video">
+            <iframe
+              src="https://www.youtube.com/embed/AQv4E1nB800"
+              title="이창현 강사 소개 영상"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full"
+            />
           </div>
         </div>
       </section>
