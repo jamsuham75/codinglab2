@@ -2,7 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { X, ArrowLeft, ExternalLink } from 'lucide-react';
+import { X, ArrowLeft, ExternalLink, Mail, ChevronRight } from 'lucide-react';
+import SocialFooter from '../SocialFooter';
 
 interface Book {
   id: number;
@@ -498,6 +499,30 @@ export default function BooksPage() {
       {selectedBook && (
         <BookModal book={selectedBook} onClose={() => setSelectedBook(null)} />
       )}
+
+      {/* CTA */}
+      <section className="px-8 py-20 bg-slate-800/40 text-center">
+        <h2 className="text-2xl font-bold text-white mb-3">강의·집필 관련 문의</h2>
+        <p className="text-slate-400 mb-8 max-w-xl mx-auto text-sm">
+          저서 기반 강의 수강, 기업 교육, 공동 연구 등 어떤 형태의 협업이든 편하게 연락 주세요.
+        </p>
+        <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <a
+            href="mailto:jamsuham75@naver.com"
+            className="bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-lg font-bold flex items-center justify-center gap-2 transition"
+          >
+            <Mail size={18} /> 이메일로 문의하기
+          </a>
+          <Link
+            href="/curriculum"
+            className="border border-slate-700 text-white px-8 py-4 rounded-lg font-bold hover:bg-slate-800 transition flex items-center justify-center gap-2"
+          >
+            강의 커리큘럼 보기 <ChevronRight size={18} />
+          </Link>
+        </div>
+      </section>
+
+      <SocialFooter />
     </div>
   );
 }

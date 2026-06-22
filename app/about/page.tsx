@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Target, ChevronRight, BookOpen, Terminal, Cpu, Award, Briefcase, GraduationCap, Play } from 'lucide-react';
+import { Target, ChevronRight, BookOpen, Terminal, Cpu, Award, Briefcase, GraduationCap, Play, Mail } from 'lucide-react';
 import MobileMenu from '../MobileMenu';
 import ContactDropdown from '../ContactDropdown';
 import SocialFooter from '../SocialFooter';
@@ -223,11 +223,14 @@ export default function AboutPage() {
         <h2 className="text-3xl font-bold mb-4 text-white">함께 시작하실 준비가 되셨나요?</h2>
         <p className="text-slate-400 mb-8">교육 수강, 기업 강의, 연구 협업 등 어떤 형태로든 문의 주세요.</p>
         <div className="flex flex-col md:flex-row justify-center gap-4">
-          <Link href="/#education" className="bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-lg font-bold flex items-center justify-center gap-2 transition">
+          <a
+            href="mailto:jamsuham75@naver.com"
+            className="bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-lg font-bold flex items-center justify-center gap-2 transition"
+          >
+            <Mail size={18} /> 이메일로 문의하기
+          </a>
+          <Link href="/education" className="border border-slate-700 text-white px-8 py-4 rounded-lg font-bold hover:bg-slate-800 transition flex items-center justify-center gap-2">
             교육 서비스 보기 <ChevronRight size={18} />
-          </Link>
-          <Link href="/books" className="border border-slate-700 text-white px-8 py-4 rounded-lg font-bold hover:bg-slate-800 transition">
-            저서 목록 보기
           </Link>
         </div>
       </section>

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Mail } from "lucide-react";
 
 export default function MobileMenu() {
   const [open, setOpen] = useState(false);
@@ -23,6 +23,15 @@ export default function MobileMenu() {
           <Link href="/education" className="hover:text-blue-400 transition" onClick={() => setOpen(false)}>교육 서비스</Link>
           <Link href="/research" className="hover:text-blue-400 transition" onClick={() => setOpen(false)}>연구/개발</Link>
           <Link href="/books" className="hover:text-blue-400 transition" onClick={() => setOpen(false)}>저서</Link>
+          <div className="border-t border-slate-800 pt-4">
+            <a
+              href="mailto:jamsuham75@naver.com"
+              className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition font-semibold"
+              onClick={() => setOpen(false)}
+            >
+              <Mail size={15} /> 이메일 문의하기
+            </a>
+          </div>
         </div>
       )}
     </div>
