@@ -38,7 +38,8 @@ export default function AboutPage() {
           </span>
         </h1>
         <p className="text-xl text-slate-400 max-w-3xl leading-relaxed">
-          25년 현업 개발 경험과 삼성·SK 경력을 바탕으로, 소프트웨어 교육의 본질을 바꾸고자 설립한 전문 연구소입니다.
+          20여년간의 SW 개발 현업 경험과 삼성·LG·SK 등 주요 기관 강의 이력을 바탕으로,
+          소프트웨어 교육의 본질을 바꾸고자 설립한 전문 연구소입니다.
         </p>
       </section>
 
@@ -48,7 +49,7 @@ export default function AboutPage() {
           <div>
             <h2 className="text-3xl font-bold mb-6 text-white">설립 철학</h2>
             <p className="text-slate-400 leading-relaxed mb-4">
-              현업에서 10년 이상 C/C++, C#, Python 등 다양한 언어로 실제 제품을 만들어온 경험에서 깨달은 것은 하나입니다.
+              현업에서 20여년간 C/C++, C#, Python 등 다양한 언어로 실제 솔루션을 만들어온 경험에서 깨달은 것은 하나입니다.
               <span className="text-white font-semibold"> 근본 원리를 모르면 어떤 도구도 제대로 쓸 수 없다</span>는 것입니다.
             </p>
             <p className="text-slate-400 leading-relaxed mb-4">
@@ -60,10 +61,10 @@ export default function AboutPage() {
           </div>
           <div className="grid grid-cols-2 gap-4">
             {[
-              { icon: <Terminal size={24} />, label: '25년+', sub: '현업 개발 경력', color: 'text-red-400', bg: 'bg-red-500/10' },
-              { icon: <BookOpen size={24} />, label: '13권+', sub: '기술 서적 집필', color: 'text-blue-400', bg: 'bg-blue-500/10' },
+              { icon: <Terminal size={24} />, label: '20년+', sub: '현업 개발 경력', color: 'text-red-400', bg: 'bg-red-500/10' },
+              { icon: <BookOpen size={24} />, label: '13권', sub: '기술 서적 집필', color: 'text-blue-400', bg: 'bg-blue-500/10' },
               { icon: <GraduationCap size={24} />, label: '1,000명+', sub: '교육 수료생', color: 'text-white', bg: 'bg-white/10' },
-              { icon: <Cpu size={24} />, label: '다수', sub: 'AI·보안 프로젝트', color: 'text-emerald-400', bg: 'bg-emerald-500/10' },
+              { icon: <Cpu size={24} />, label: '다수', sub: 'AI·빅데이터 강의', color: 'text-emerald-400', bg: 'bg-emerald-500/10' },
             ].map((item) => (
               <div key={item.label} className="p-6 bg-slate-800 rounded-2xl border border-slate-700 text-center">
                 <div className={`${item.bg} p-3 w-fit rounded-lg mx-auto mb-3`}>
@@ -97,32 +98,53 @@ export default function AboutPage() {
                   <Briefcase size={15} /> 주요 경력
                 </h3>
                 <ul className="space-y-2 text-slate-300 text-sm">
-                  <li className="flex items-start gap-2"><ChevronRight size={14} className="text-blue-400 mt-0.5 flex-shrink-0" />삼성전자 — 시스템 소프트웨어 개발</li>
-                  <li className="flex items-start gap-2"><ChevronRight size={14} className="text-blue-400 mt-0.5 flex-shrink-0" />SK 계열사 — 보안 솔루션 개발 및 아키텍처</li>
-                  <li className="flex items-start gap-2"><ChevronRight size={14} className="text-blue-400 mt-0.5 flex-shrink-0" />성신여자대학교 융합보안공학과 겸임교수</li>
                   <li className="flex items-start gap-2"><ChevronRight size={14} className="text-blue-400 mt-0.5 flex-shrink-0" />이창현코딩연구소 대표 (현)</li>
+                  <li className="flex items-start gap-2"><ChevronRight size={14} className="text-blue-400 mt-0.5 flex-shrink-0" />성신여자대학교 융합보안공학과 겸임교수 (전)</li>
+                  <li className="flex items-start gap-2"><ChevronRight size={14} className="text-blue-400 mt-0.5 flex-shrink-0" />서울시 중부기술교육원 응용소프트웨어과 전임교수 / 학과장 (2018–2019)</li>
+                  <li className="flex items-start gap-2"><ChevronRight size={14} className="text-blue-400 mt-0.5 flex-shrink-0" />삼성멀티캠퍼스 / 코스타에듀 / 비트교육센터 강의</li>
+                  <li className="flex items-start gap-2"><ChevronRight size={14} className="text-blue-400 mt-0.5 flex-shrink-0" />20여년간 SW 개발회사에서 IT 솔루션 개발</li>
+                  <li className="flex items-start gap-2"><ChevronRight size={14} className="text-blue-400 mt-0.5 flex-shrink-0" />SK 하이닉스 재직자 대상 알고리즘 테스트 문제 출제 (2018, 총 5회)</li>
                 </ul>
               </div>
+
+              <div>
+                <h3 className="flex items-center gap-2 text-sm font-semibold text-slate-500 uppercase tracking-wider mb-3">
+                  <GraduationCap size={15} /> 강의 경력
+                </h3>
+                <ul className="space-y-2 text-slate-300 text-sm">
+                  <li className="flex items-start gap-2"><ChevronRight size={14} className="text-emerald-400 mt-0.5 flex-shrink-0" />한국소프트웨어기술진흥협회 — AI 기반 Node.js·JavaScript 풀스택 개발자 양성 (2021–2026)</li>
+                  <li className="flex items-start gap-2"><ChevronRight size={14} className="text-emerald-400 mt-0.5 flex-shrink-0" />LG CNS 대중소상생 — 자바 백엔드 재직자 강의 (2025)</li>
+                  <li className="flex items-start gap-2"><ChevronRight size={14} className="text-emerald-400 mt-0.5 flex-shrink-0" />KG 카이로스 — 로봇 AI, 파이썬, 빅데이터 (2025)</li>
+                  <li className="flex items-start gap-2"><ChevronRight size={14} className="text-emerald-400 mt-0.5 flex-shrink-0" />제주대학교 — 파이썬 빅데이터 (2025)</li>
+                  <li className="flex items-start gap-2"><ChevronRight size={14} className="text-emerald-400 mt-0.5 flex-shrink-0" />삼성멀티캠퍼스 — AI 기반 웹개발자 양성 과정 (2022)</li>
+                  <li className="flex items-start gap-2"><ChevronRight size={14} className="text-emerald-400 mt-0.5 flex-shrink-0" />한양대학교 에리카 캠퍼스 — C 프로그래밍 기초 (2022)</li>
+                  <li className="flex items-start gap-2"><ChevronRight size={14} className="text-emerald-400 mt-0.5 flex-shrink-0" />성신여자대학교 — 시스템 프로그래밍 (2018–2019)</li>
+                </ul>
+              </div>
+
               <div>
                 <h3 className="flex items-center gap-2 text-sm font-semibold text-slate-500 uppercase tracking-wider mb-3">
                   <Award size={15} /> 전문 분야
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  {['C/C++', 'C#', 'Python', 'AI 응용', '시스템 보안', '로봇 제어', '알고리즘', '컴퓨터 구조'].map((tag) => (
+                  {['C/C++', 'C#', 'Python', 'JavaScript', 'Node.js', 'React', 'AI·빅데이터', '시스템 프로그래밍', '알고리즘', '웹개발'].map((tag) => (
                     <span key={tag} className="px-3 py-1 bg-slate-700 text-slate-300 rounded-full text-xs border border-slate-600">
                       {tag}
                     </span>
                   ))}
                 </div>
               </div>
+
               <div>
                 <h3 className="flex items-center gap-2 text-sm font-semibold text-slate-500 uppercase tracking-wider mb-3">
                   <BookOpen size={15} /> 주요 저서
                 </h3>
                 <ul className="space-y-1 text-slate-400 text-sm">
-                  <li>· C# 완전 정복 시리즈 (다수)</li>
-                  <li>· 파이썬으로 배우는 AI 프로그래밍</li>
-                  <li>· 알고리즘 원리와 실전 문제풀이</li>
+                  <li>· 처음 만나는 C# (혜지원, 2026)</li>
+                  <li>· 프론트엔드 입문자를 위한 리액트의 정석 with 타입스크립트 (길벗캠퍼스, 2025)</li>
+                  <li>· 백엔드 입문자를 위한 모던자바스크립트 &amp; Node.js (길벗캠퍼스, 2023)</li>
+                  <li>· 나혼자 파이썬 / 나혼자 C언어 (디지털북스, 2020–2021)</li>
+                  <li>· C# 프로그래밍의 정석 (혜지원, 2020)</li>
                   <li className="text-slate-500">· 그 외 다수 — <Link href="/books" className="text-blue-400 hover:underline">전체 저서 보기</Link></li>
                 </ul>
               </div>
@@ -154,7 +176,7 @@ export default function AboutPage() {
               {
                 num: '03',
                 title: '실전 적용',
-                desc: '25년 현업 경험에서 나온 실제 프로젝트 기반 예제로 현장 감각을 익힙니다.',
+                desc: '20여년 현업 경험에서 나온 실제 프로젝트 기반 예제로 현장 감각을 익힙니다.',
                 color: 'border-white/20',
                 numColor: 'text-white',
               },
