@@ -320,15 +320,15 @@ export default function CurriculumPage() {
       <section className="px-4 sm:px-8 pb-20 max-w-6xl mx-auto">
         {/* Summary card */}
         <div className="bg-slate-800 rounded-3xl border border-slate-700 p-4 sm:p-8 mb-8 md:mb-10">
-          <div className="flex flex-wrap items-start justify-between gap-6">
-            <div className="flex-1 min-w-0">
+          <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
+            <div className="min-w-0">
               <div className="flex items-center gap-3 mb-1">
                 <h2 className={`text-2xl font-extrabold ${course.accent}`}>{course.label}</h2>
               </div>
               <p className={`text-xs font-medium mb-4 ${course.accent} opacity-70`}>
                 📚 {course.book}
               </p>
-              <p className="text-slate-400 leading-relaxed mb-5 max-w-2xl">{course.summary}</p>
+              <p className="text-slate-400 leading-relaxed mb-5">{course.summary}</p>
               <div className="flex flex-wrap gap-2">
                 {course.tags.map((tag) => (
                   <span key={tag} className={`px-3 py-1 rounded-full text-xs font-medium border border-slate-600 ${course.badgeBg} ${course.badgeText}`}>
@@ -337,12 +337,12 @@ export default function CurriculumPage() {
                 ))}
               </div>
             </div>
-            <div className="flex gap-4 flex-shrink-0">
-              <div className="text-center p-3 sm:p-4 bg-slate-900 rounded-2xl border border-slate-700 min-w-[64px] sm:min-w-[80px]">
+            <div className="flex gap-3 sm:gap-4 flex-shrink-0">
+              <div className="text-center p-3 sm:p-4 bg-slate-900 rounded-2xl border border-slate-700 min-w-[72px] sm:min-w-[80px]">
                 <Clock size={16} className={`mx-auto mb-1 ${course.accent}`} />
                 <div className="text-xs text-slate-400">{course.total}</div>
               </div>
-              <div className="text-center p-3 sm:p-4 bg-slate-900 rounded-2xl border border-slate-700 min-w-[64px] sm:min-w-[80px]">
+              <div className="text-center p-3 sm:p-4 bg-slate-900 rounded-2xl border border-slate-700 min-w-[72px] sm:min-w-[80px]">
                 <BookOpen size={16} className={`mx-auto mb-1 ${course.accent}`} />
                 <div className="text-xs text-slate-400">{course.level}</div>
               </div>
