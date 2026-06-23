@@ -3,6 +3,7 @@ import { BookOpen, Terminal, Cpu, ChevronRight, Target } from 'lucide-react';
 import MobileMenu from './MobileMenu';
 import ContactDropdown from './ContactDropdown';
 import SocialFooter from './SocialFooter';
+import VisitorCounter from './VisitorCounter';
 
 const CodingLabWeb = () => {
   return (
@@ -50,6 +51,7 @@ const CodingLabWeb = () => {
             연구 및 협업 문의
           </Link>
         </div>
+        <VisitorCounter />
       </section>
 
       {/* Core Services */}
