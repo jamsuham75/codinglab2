@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { Target, ChevronRight, BookOpen, Terminal, Cpu, Award, Briefcase, GraduationCap, Play, Mail } from 'lucide-react';
+import Image from 'next/image';
+import { ChevronRight, BookOpen, Terminal, Cpu, Award, Briefcase, GraduationCap, Play, Mail } from 'lucide-react';
 import MobileMenu from '../MobileMenu';
 import ContactDropdown from '../ContactDropdown';
 import SocialFooter from '../SocialFooter';
@@ -10,7 +11,7 @@ export default function AboutPage() {
       {/* Navigation */}
       <nav className="relative flex items-center justify-between px-4 sm:px-8 py-6 border-b border-slate-800 bg-slate-900/50 backdrop-blur-md sticky top-0 z-50">
         <Link href="/" className="text-2xl font-bold tracking-tighter text-blue-400 flex items-center gap-2">
-          <Target className="text-red-500" size={24} />
+          <Image src="/logo.png" alt="로고" width={32} height={32} className="object-contain" />
           <span>이창현<span className="text-white">코딩연구소</span></span>
         </Link>
         <div className="hidden md:flex space-x-8 text-sm font-medium">

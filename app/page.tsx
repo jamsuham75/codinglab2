@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { BookOpen, Terminal, Cpu, ChevronRight, Target } from 'lucide-react';
+import Image from 'next/image';
+import { BookOpen, Terminal, Cpu, ChevronRight } from 'lucide-react';
 import MobileMenu from './MobileMenu';
 import ContactDropdown from './ContactDropdown';
 import SocialFooter from './SocialFooter';
@@ -11,7 +12,7 @@ const CodingLabWeb = () => {
       {/* Navigation */}
       <nav className="relative flex items-center justify-between px-4 sm:px-8 py-5 border-b border-slate-800 bg-slate-900/50 backdrop-blur-md sticky top-0 z-50">
         <div className="text-xl sm:text-2xl font-bold tracking-tighter text-blue-400 flex items-center gap-2">
-          <Target className="text-red-500" size={22} />
+          <Image src="/logo.png" alt="로고" width={32} height={32} className="object-contain" />
           <span>이창현<span className="text-white">코딩연구소</span></span>
         </div>
         <div className="hidden md:flex space-x-8 text-sm font-medium">

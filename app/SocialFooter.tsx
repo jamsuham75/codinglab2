@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Target, Mail } from "lucide-react";
+import Image from "next/image";
+import { Mail } from "lucide-react";
 
 function YoutubeIcon() {
   return (
@@ -37,7 +38,7 @@ export default function SocialFooter() {
     <footer className="px-8 py-16 border-t border-slate-800 text-center">
       <div className="max-w-6xl mx-auto flex flex-col items-center gap-6">
         <Link href="/" className="text-xl font-bold tracking-tighter text-blue-400 flex items-center gap-2">
-          <Target className="text-red-500" size={20} />
+          <Image src="/logo.png" alt="로고" width={28} height={28} className="object-contain" />
           <span>이창현<span className="text-white">코딩연구소</span></span>
         </Link>
         <p className="text-slate-500 text-sm max-w-md">
