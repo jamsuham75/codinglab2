@@ -3,36 +3,40 @@
 import { useEffect, useState } from 'react';
 import { Eye } from 'lucide-react';
 
-// 실제 카운터 API → 실패 시 localStorage 폴백
+const BASE = 1000;
+const HOUR_MS = 60 * 60 * 1000; // 1시간에 1회 카운트
+
 export default function VisitorCounter() {
   const [count, setCount] = useState<number | null>(null);
 
   useEffect(() => {
-    const isNewSession = !sessionStorage.getItem('lch_visited');
-    if (isNewSession) sessionStorage.setItem('lch_visited', '1');
+    const now = Date.now();
+    const lastTime = parseInt(localStorage.getItem('lch_last') ?? '0', 10);
+    const isNewVisit = now - lastTime > HOUR_MS;
 
-    // 1) Vercel KV API 시도
-    fetch('/api/views', { method: isNewSession ? 'POST' : 'GET' })
+    // Vercel KV API 시도
+    fetch('/api/views', { method: isNewVisit ? 'POST' : 'GET' })
       .then((r) => r.json())
       .then((d) => {
         if (d.count != null) {
+          if (isNewVisit) localStorage.setItem('lch_last', String(now));
           setCount(d.count);
         } else {
-          fallback(isNewSession);
+          localFallback(isNewVisit, now);
         }
       })
-      .catch(() => fallback(isNewSession));
+      .catch(() => localFallback(isNewVisit, now));
   }, []);
 
-  function fallback(isNewSession: boolean) {
-    const BASE = 1000; // 사이트 시작 기준 방문자 수
+  function localFallback(isNewVisit: boolean, now: number) {
     const stored = parseInt(localStorage.getItem('lch_views') ?? '0', 10);
-    if (isNewSession) {
+    if (isNewVisit) {
+      localStorage.setItem('lch_last', String(now));
       const next = stored + 1;
       localStorage.setItem('lch_views', String(next));
       setCount(BASE + next);
     } else {
-      setCount(BASE + (stored || 1));
+      setCount(BASE + stored);
     }
   }
 
