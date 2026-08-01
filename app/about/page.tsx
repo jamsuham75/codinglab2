@@ -90,10 +90,10 @@ export default function AboutPage() {
               </div>
               <div className="text-center">
                 <div className="text-lg font-bold text-white">이창현</div>
-                <div className="text-sm text-slate-400">대표 / 수석 강사</div>
+                <div className="text-sm text-slate-400">대표 / 교수</div>
               </div>
               <a
-                href="https://youtu.be/AQv4E1nB800"
+                href="https://youtube.com/shorts/dVNcPbwuzbI?si=7YUda8-09v1a8wet"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-4 py-2 bg-red-600 hover:bg-red-500 text-white text-xs font-bold rounded-lg transition"
@@ -167,12 +167,12 @@ export default function AboutPage() {
             <div className="bg-red-500/10 p-2 rounded-lg">
               <Play size={18} className="text-red-400" />
             </div>
-            <span className="font-semibold text-white text-sm">강사 소개 영상</span>
+            <span className="font-semibold text-white text-sm">이창현 교수 교육 철학</span>
           </div>
           <div className="aspect-video">
             <iframe
-              src="https://www.youtube.com/embed/AQv4E1nB800"
-              title="이창현 강사 소개 영상"
+              src="https://www.youtube.com/embed/YDR7-O7RYzw"
+              title="이창현 교수 교육 철학"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="w-full h-full"
